@@ -78,8 +78,8 @@ export default function Home() {
         <div className="container">
           <span className="eyebrow">Tools & Software</span>
           <div className="tools-strip">
-            {['Clip Studio Paint', 'Adobe Photoshop', 'Illustrator', 'Premiere Pro',
-              'Ren\'Py', 'Fade In', 'Unity'].map(t => (
+            {['Fade In', 'Clip Studio Paint', 'Adobe Photoshop', 'Illustrator', 'Premiere Pro',
+              'Ren\'Py', 'Unity'].map(t => (
               <span key={t} className="tag">{t}</span>
             ))}
           </div>
