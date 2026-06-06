@@ -6,6 +6,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+app.set('trust proxy', 1);
 
 app.use(helmet({ contentSecurityPolicy: false }));
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
@@ -188,7 +189,11 @@ app.get('/api/semester', (req, res) => res.json(portfolioData.semester));
 // ── Serve React in production ───────────────────────────────────────────────
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+  // CHANGE THIS:
+  app.use(express.static(path.join(__dirname, '../client/dist'), {
+    maxAge: '7d',
+    etag: true,
+  }));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist/index.html'));
   });
