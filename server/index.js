@@ -102,6 +102,7 @@ const portfolioData = {
       { id: 1, title: 'Eighty-Six Fanart', medium: 'Digital, Photoshop', year: 2022, src: '/art/sample1.png', thumb: '/art/thumb1.png' },
       { id: 2, title: 'Tide Pod Boys 3 Page 1', medium: 'Clip Studio Paint', year: 2025, src: '/art/sample2.png', thumb: '/art/thumb2.png' },
       { id: 3, title: 'Monster Prom Fanart', medium: 'Pen and Paper', year: 2026, src: '/art/sample3.png', thumb: '/art/thumb3.png' },
+      { id: 4, title: 'Pixelart', medium: 'Aseprite', year: 2025, src: '/art/sample4.png', thumb: '/art/thumb4.png' },
     ],
     animations: [
       { id: 1, title: 'Dog', medium: 'Frame-by-Frame, Aseprite', year: 2025, src: '/art/anim1.gif' },
